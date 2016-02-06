@@ -97,7 +97,9 @@ ul#tabs {
 	}
 	
 	img {
-		width: 80%;
+		width: auto;
+		height: auto;
+		max-width: 80%;
 		max-height: 150px;
 		margin: 1.5em 0;
 		vertical-align: middle;
@@ -140,13 +142,14 @@ ul#tabs {
 	width: 100%; 
 }
 
-//SVG Images
-
 
 /*--------------------------------------------------------------
 ## Responsive
 --------------------------------------------------------------*/
-@media screen and (max-width: 825px) {
+@break-large:    ~"only screen and (max-width: 825px)";
+@break-small:    ~"only screen and (max-width: 525px)";
+
+@media @break-large {
 	.column-3 {
 		width: 50%;
 		
@@ -161,7 +164,7 @@ ul#tabs {
 	}
 }
 
-@media screen and (max-width: 525px) {
+@media @break-small {
 	.column-3 {
 		width: 100%;
 		
